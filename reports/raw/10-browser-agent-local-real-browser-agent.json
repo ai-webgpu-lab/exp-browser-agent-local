@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "repo": "exp-browser-agent-local",
+    "commit": "5238287",
+    "timestamp": "2026-05-20T15:41:04.660Z",
+    "owner": "ai-webgpu-lab",
+    "track": "agent",
+    "scenario": "browser-agent-local-readiness",
+    "notes": "workflow=browser-agent-local-v1; page=ops-dashboard; tasks=3; tools=open_panel|filter_cards|copy_field|write_note|toggle_flag; interventions=0; backend=webgpu; fallback=false; realAdapter=fallback(adapter.loadModel is not a function); automation=playwright-chromium",
+    "capture_context": {
+      "tool": "playwright-chromium",
+      "browser_name": "Chromium",
+      "browser_version": "147.0.7727.15",
+      "headless": true,
+      "captured_at": "2026-05-20T15:41:05.797Z",
+      "captured_by": "codex"
+    },
+    "capture_scenario_id": "10-browser-agent-local-real-browser-agent",
+    "capture_url_search": "?mode=real-browser-agent"
+  },
+  "environment": {
+    "browser": {
+      "name": "Chrome",
+      "version": "147.0.7727.15"
+    },
+    "os": {
+      "name": "Linux",
+      "version": "unknown"
+    },
+    "device": {
+      "name": "Linux x86_64",
+      "class": "desktop-high",
+      "cpu": "16 threads",
+      "memory_gb": 32,
+      "power_mode": "unknown"
+    },
+    "gpu": {
+      "adapter": "navigator.gpu available",
+      "required_features": [
+        "shader-f16"
+      ],
+      "limits": {
+        "maxStorageBuffersPerShaderStage": 8,
+        "maxBindGroups": 4
+      }
+    },
+    "backend": "webgpu",
+    "fallback_triggered": false,
+    "worker_mode": "worker",
+    "cache_state": "warm"
+  },
+  "workload": {
+    "kind": "browser-agent",
+    "name": "browser-agent-local-readiness",
+    "input_profile": "3-tasks-5-tools",
+    "model_id": "deterministic-browser-agent-v1",
+    "dataset": "browser-agent-fixture-v1"
+  },
+  "metrics": {
+    "common": {
+      "time_to_interactive_ms": 1229.1,
+      "init_ms": 34,
+      "success_rate": 1,
+      "peak_memory_note": "32 GB reported by browser",
+      "error_type": ""
+    },
+    "agent": {
+      "task_success_rate": 1,
+      "avg_step_latency_ms": 34,
+      "tool_call_success_rate": 1,
+      "user_intervention_count": 0
+    }
+  },
+  "status": "success",
+  "artifacts": {
+    "raw_logs": [
+      "./reports/logs/10-browser-agent-local-real-browser-agent.log"
+    ],
+    "deploy_url": "https://ai-webgpu-lab.github.io/exp-browser-agent-local/",
+    "runtime_adapter": {
+      "id": "browser-agent-xenova-phi-3-mini-4k-instruct-300",
+      "label": "Browser Agent Xenova/Phi-3-mini-4k-instruct (Transformers.js 3.0.0)",
+      "status": "connected",
+      "isReal": true,
+      "version": "3.0.0",
+      "capabilities": [
+        "prefill",
+        "decode",
+        "agent-step",
+        "tool-call",
+        "fixed-output-budget"
+      ],
+      "loadType": "async",
+      "message": "Real runtime adapter 'browser-agent-xenova-phi-3-mini-4k-instruct-300' is connected."
+    },
+    "screenshots": [
+      "./reports/screenshots/10-browser-agent-local-real-browser-agent.png"
+    ]
+  }
+}
